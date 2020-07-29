@@ -1,0 +1,33 @@
+{
+    "type": "APL",
+    "version": "1.3",
+    "settings": {},
+    "theme": "dark",
+    "import": [],
+    "resources": [],
+    "styles": {},
+    "onMount": [],
+    "graphics": {},
+    "commands": {},
+    "layouts": {},
+    "mainTemplate": {
+        "parameters": [
+            "payload"
+        ],
+        "items": [
+            {
+                "type": "Video",
+                "width": "1280",
+                "maxWidth": "1280",
+                "minWidth": "1280",
+                "height": "800",
+                "minHeight": "800",
+                "maxHeight": "800",
+                "audioTrack": "foreground",
+                "autoplay": true,
+                "source": "https://motivationalpersons.s3.us-east-2.amazonaws.com/videos/Bill+Gates+Motivational+Videos+-+Success+Secrets+-+Best+Inspirational+Speech+-+Startup+Stories.mp4",
+                "scale": "best-fit-down"
+            }
+        ]
+    }
+  }
