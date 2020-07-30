@@ -25,7 +25,7 @@ const LaunchRequestHandler = {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'LaunchRequest';
     },
     handle(handlerInput) {
-        const speakOutput = 'Welcome, you can say Hello or Help. Which would you like to try?';
+        const speakOutput = '<speak>Welcome to Scroller Demo. <break time="1s"/> This is a video repository application, which enables the user to navigate through his voice or through a simple touch. <break time="1s"/>Scroller allows the user to scan through huge set of video contents with a unique name. <break time="1s"/> Explore and  get a feel of it for yourself. </speak>';
         return handlerInput.responseBuilder
             .speak(speakOutput)
             // .addDirective({
@@ -46,7 +46,7 @@ const WillSmithHandler = {
     handlerInput.requestEnvelope.request.source.id === '1')
     },
     handle(handlerInput) {
-        const speakOutput = 'one intent is been touched by user';
+        const speakOutput = '';
         if(aplHelper.supportsAPL(handlerInput)) {
             return handlerInput.responseBuilder
               .speak(speakOutput)
@@ -72,7 +72,7 @@ const HaterHandler = {
     handlerInput.requestEnvelope.request.source.id === '2')
     },
     handle(handlerInput) {
-        const speakOutput = 'one intent is been touched by user';
+        const speakOutput = '';
         if(aplHelper.supportsAPL(handlerInput)) {
             return handlerInput.responseBuilder
               .speak(speakOutput)
@@ -98,7 +98,7 @@ const JackMaHandler = {
     handlerInput.requestEnvelope.request.source.id === '3')
     },
     handle(handlerInput) {
-        const speakOutput = 'one intent is been touched by user';
+        const speakOutput = '';
         if(aplHelper.supportsAPL(handlerInput)) {
             return handlerInput.responseBuilder
               .speak(speakOutput)
@@ -124,7 +124,7 @@ const RockHandler = {
     handlerInput.requestEnvelope.request.source.id === '4')
     },
     handle(handlerInput) {
-        const speakOutput = 'one intent is been touched by user';
+        const speakOutput = '';
         if(aplHelper.supportsAPL(handlerInput)) {
             return handlerInput.responseBuilder
               .speak(speakOutput)
@@ -150,7 +150,7 @@ const AbdulHandler = {
     handlerInput.requestEnvelope.request.source.id === '5')
     },
     handle(handlerInput) {
-        const speakOutput = 'one intent is been touched by user';
+        const speakOutput = '';
         if(aplHelper.supportsAPL(handlerInput)) {
             return handlerInput.responseBuilder
               .speak(speakOutput)
@@ -177,7 +177,7 @@ const BillGatesHandler = {
     handlerInput.requestEnvelope.request.source.id === '6')
     },
     handle(handlerInput) {
-        const speakOutput = 'one intent is been touched by user';
+        const speakOutput = '';
         if(aplHelper.supportsAPL(handlerInput)) {
             return handlerInput.responseBuilder
               .speak(speakOutput)
@@ -202,7 +202,7 @@ const HelloWorldIntentHandler = {
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'HelloWorldIntent';
     },
     handle(handlerInput) {
-        const speakOutput = 'Hello World!';
+        const speakOutput = '';
         return handlerInput.responseBuilder
             .speak(speakOutput)
             .addDirective({
@@ -211,10 +211,11 @@ const HelloWorldIntentHandler = {
                 datasources: require('./two.json'),
                 token: "VideoPlayerToken"
               })
-            //.reprompt('add a reprompt if you want to keep the session open for the user to respond')
+            .reprompt('add a reprompt if you want to keep the session open for the user to respond')
             .getResponse();
     }
 };
+
 const HelpIntentHandler = {
     canHandle(handlerInput) {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
